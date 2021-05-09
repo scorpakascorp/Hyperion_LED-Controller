@@ -19,7 +19,7 @@
 #define LED LED_BUILTIN // LED in NodeMCU at pin GPIO16 (D0) or LED_BUILTIN @Lolin32.
 int ledState = LOW;
 
-LoggerInit loggerInit;
+//LoggerInit loggerInit;
 
 WrapperWiFi wifi;
 WrapperOTA ota;
@@ -215,7 +215,7 @@ void handleEvents(void) {
 }
 
 void setup(void) {
-  //LoggerInit loggerInit = LoggerInit(115200);
+  LoggerInit loggerInit = LoggerInit(115200);
   
   initConfig();
   ota = WrapperOTA();
