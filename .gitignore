@@ -1,2 +1,5 @@
 ConfigStatic.h
 ConfigStatic.h-*
+
+.pio
+.vscode
