@@ -40,6 +40,8 @@ e) Logging https://github.com/SciLor/Arduino-logging-library
 3. Open the project folder in VS Code
 4. Compile and upload to your board
 
+#### AP fallback
+HyperionRGB will try to connected to the saved WiFi for 3 times and then falls back into AP Mode for 60 seconds. It will open a new WiFi network with the standard name "HyperionRGB" and password "HyperionRGB"- The SSID/Password may be overriden via the static config. (hostname/password)
 # Configuration of Hyperion NG
 
 

@@ -44,8 +44,8 @@ class SelectEntry : public SelectEntryBase {
 class WrapperWebconfig {  
   public:
     void
-      begin(),
-      handle(void);
+      begin(); 
+    bool handle(void);
   private:
     void
       handleNotFound(void),
@@ -85,6 +85,7 @@ class WrapperWebconfig {
     #elif defined(ESP32)
       ESP32WebServer* _server = new ESP32WebServer(80);
     #endif
+    bool _handled;
 };
 
 #endif
