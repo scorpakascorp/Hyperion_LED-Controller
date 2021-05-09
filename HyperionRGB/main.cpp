@@ -62,6 +62,10 @@ void animationStep() {
     case FIRE2012:
       ledStrip.fire2012Step();
       break;
+    case OFF:
+    case HYPERION_UDP:
+    case STATIC_COLOR:
+      break;
   }
 }
 
@@ -211,7 +215,7 @@ void handleEvents(void) {
 }
 
 void setup(void) {
-  LoggerInit loggerInit = LoggerInit(115200);
+  //LoggerInit loggerInit = LoggerInit(115200);
   
   initConfig();
   ota = WrapperOTA();
@@ -280,8 +284,8 @@ void loop(void) {
       animationThread.runIfNeeded();
       break;
     case STATIC_COLOR:
-      break;
     case HYPERION_UDP:
+    case OFF:
       break;
   }
 }
