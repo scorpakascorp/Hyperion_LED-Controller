@@ -2,7 +2,7 @@
 
 Original GIT [SciLor/Hyperion_LED-Controller](https://github.com/SciLor/Hyperion_LED-Controller)
 
-This code allows you to use a ESP8266/ESP32 with a fitting led strip as extension for [hyperion](https://github.com/hyperion-project) (ambilight clone).
+This code allows you to use a ESP8266 with a fitting led strip as extension for [hyperion](https://github.com/hyperion-project) (ambilight clone).
 You need to configure hyperion to stream the leds as UDP to the esp.
 
 English Tutorial: https://hyperion-project.org/threads/tutorial-wireless-led-extension-with-esp8266-esp32-for-hyperion.3004/
@@ -43,7 +43,7 @@ e) Logging https://github.com/SciLor/Arduino-logging-library
 # Configuration of Hyperion NG
 
 
-Go to Confiruration -> General, select Controller type: **udpraw** set Target IP (your ESP IP addr) and Port (**19446**).
+Go to **Confiruration -> General**, select Controller type: **udpraw** set Target IP (your ESP IP addr) and Port (**19446**).
 
 
 There's a detailed instruction page for [controlling multiple devices](https://hyperion-project.org/wiki/Controlling-Multiple-Devices).
