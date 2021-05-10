@@ -16,9 +16,10 @@
 #include "WrapperWebconfig.h"
 #include <DNSServer.h>
 
-#define LED LED_BUILTIN // LED in NodeMCU at pin GPIO16 (D0) or LED_BUILTIN @Lolin32.
-int ledState = LOW;
-
+#ifdef USE_INTERNAL_LED
+  #define LED LED_BUILTIN // LED in NodeMCU at pin GPIO16 (D0) or LED_BUILTIN @Lolin32.
+  int ledState = LOW;
+#endif
 //LoggerInit loggerInit;
 
 WrapperWiFi wifi;
@@ -45,13 +46,17 @@ EnhancedThread apThread = EnhancedThread();
 DNSServer dnsServer;
 
 void statusInfo(void) {
+#ifdef USE_INTERNAL_LED  
   if (ledState == LOW) {
     ledState = HIGH;
   } else {
     ledState = LOW;
+#endif
     Log.debug("HEAP=%i", ESP.getFreeHeap());
+#ifdef USE_INTERNAL_LED  
   }
   digitalWrite(LED, ledState);
+#endif
 }
 
 void animationStep() {

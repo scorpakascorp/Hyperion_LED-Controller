@@ -7,6 +7,10 @@
 //#define CONFIG_OVERWRITE_WEBCONFIG 1
 
 /*------------------------------------------------*/
+/*Internal LED*/
+#define USE_INTERNAL_LED
+
+/*------------------------------------------------*/
 /*Logging level*/
 
 #define LOGLEVEL LOG_LEVEL_INFOS
